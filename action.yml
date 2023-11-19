@@ -12,7 +12,7 @@ runs:
     - name: Install VC tools
       if: contains(inputs.os, 'windows')
       shell: pwsh
-      run: choco install -y visualstudio2022buildtools --package-parameters "--add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --norestart --wait --quiet"
+      run: choco install -y --execution-timeout=0 visualstudio2022buildtools --package-parameters "--add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --norestart --wait --quiet"
     - name: Setup VC Tools
       if: contains(inputs.os, 'windows')
       uses: ilammy/msvc-dev-cmd@v1
