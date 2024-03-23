@@ -19,6 +19,6 @@ runs:
       with:
         vsversion: 2022
     - name: Setup CMake
-      uses: jwlawson/actions-setup-cmake@v1.14
+      uses: jwlawson/actions-setup-cmake@v2.0.1
     - name: Setup Ninja
       uses: cmelchior/setup-ninja@master
